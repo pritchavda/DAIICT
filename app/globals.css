@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background 
+}
+
+/* Oculta la barra de desplazamiento para Chrome, Safari y Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Oculta la barra de desplazamiento para IE, Edge y Firefox */
+html, body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.rdp-vhidden {
+  @apply hidden;
+}
+
+div.rdp-caption_dropdowns{
+  @apply flex gap-5 w-full
+}
+
+select.rdp-dropdown {
+  @apply bg-black p-1 rounded
+}
+
+/* Main Navbar Menu */
+.navbarButton {
+  @apply text-3xl font-semibold mb-4
+}
+
+.navbarLink {
+  @apply px-2
+}
+ 
+/*Landing styles*/
+
+#header {
+
+  background-image: url(./assets/Imgs/sun.mp4);
+  background-size: cover;
+  background-position: center;
+}
+
+.lineMask {
+  overflow: hidden;
+}
+
+/*Dashboard*/
+
+.sectionDashboard {
+  @apply flex flex-col w-full md:h-[100vh] bg-background 
+}
+
+.principalChartButton {
+  @apply px-4 py-1 border border-white rounded-full text-white text-sm h-fit
+}
+
+#bannerMR {
+  width: 90%;
+  height: 50%;
+  padding-top: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-image: url('https://www.nasa.gov/wp-content/uploads/2022/04/halleffectinplasmas.particles-optimized-50pctspeed.gif');
+}
+
+#principalChartContainer canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.displayCharAndDescription canvas{
+  width: 100% !important;
+
+}
